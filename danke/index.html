@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Danke — deine Anfrage ist da · ELEFTHERI</title>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="../fonts/fonts.css" />
+<link rel="stylesheet" href="../styles.css" />
+<script>document.documentElement.classList.add("js");</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23C9963A' stroke-linecap='round'%3E%3Ccircle cx='100' cy='100' r='86' stroke-width='6'/%3E%3Cpath d='M92 84 C82 72 70 56 60 42' stroke-width='8'/%3E%3Cpath d='M108 84 C118 72 130 56 140 42' stroke-width='8'/%3E%3C/g%3E%3Ccircle cx='100' cy='64' r='10' fill='%23C9963A'/%3E%3Cpath d='M100 74 C106 75 111 81 111 90 C111 98 107 101 107 108 C107 118 115 120 116 130 C117 146 109 164 100 178 C91 164 83 146 84 130 C85 120 93 118 93 108 C93 101 89 98 89 90 C89 81 94 75 100 74 Z' fill='%23C9963A'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="signet" viewBox="0 0 200 200">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="100" cy="100" r="86" stroke-width="5"/>
+      <path d="M92 84 C82 72, 70 56, 60 42" stroke-width="7.5"/>
+      <path d="M108 84 C118 72, 130 56, 140 42" stroke-width="7.5"/>
+    </g>
+    <circle cx="100" cy="64" r="9.5" fill="currentColor"/>
+    <path d="M100 74 C106 75, 111 81, 111 90 C111 98, 107 101, 107 108 C107 118, 115 120, 116 130 C117 146, 109 164, 100 178 C91 164, 83 146, 84 130 C85 120, 93 118, 93 108 C93 101, 89 98, 89 90 C89 81, 94 75, 100 74 Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../" aria-label="ELEFTHERI — zur Startseite">
+      <svg class="brand-mark" aria-hidden="true"><use href="#signet"/></svg>
+      <span class="brand-word">ELEFTHERI</span>
+    </a>
+  </div>
+</header>
+
+<main class="section" id="danke">
+  <div class="narrow">
+    <p class="eyebrow">Angekommen</p>
+    <h1 class="h2">Danke<span id="dankeName"></span>. <em>Deine Anfrage ist bei mir.</em></h1>
+
+    <!-- Normalfall -->
+    <div id="dankeAB">
+      <p class="lede">Ich lese sie mir in Ruhe durch und melde mich innerhalb von 3&nbsp;Werktagen persönlich bei dir — auf dem Weg, den du dir ausgesucht hast. Vorbereiten musst du nichts.</p>
+      <p>Eine kurze Bestätigung ist zu dir unterwegs. Sie kann ein paar Minuten brauchen — manchmal bis zu zehn. Falls sie dann immer noch fehlt: Schau bitte auch im Spam-Ordner nach.</p>
+      <p>Wenn du die Zeit bis dahin nutzen magst: Der Freiheits‑Check ist eine gute Einstimmung — 10 Fragen, etwa 15 Minuten, für dich allein.</p>
+    </div>
+
+    <!-- Wer eher am Anfang steht -->
+    <div id="dankeC" hidden>
+      <p class="lede">Aus deinen Antworten lese ich: Du stehst eher am Anfang — und das ist ein guter Ort.</p>
+      <p>Mein ehrlicher Tipp: Mach vorher den Freiheits‑Check. 10 Fragen, etwa 15 Minuten, für dich allein. Danach weißt du genauer, was du eigentlich willst — und unser Gespräch wird viel ergiebiger.</p>
+      <p>Ich melde mich trotzdem persönlich bei dir, innerhalb von 3&nbsp;Werktagen. Eine kurze Bestätigung ist zu dir unterwegs — sie kann ein paar Minuten brauchen, manchmal bis zu zehn. Falls sie dann immer noch fehlt: Schau bitte auch im Spam-Ordner nach.</p>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://check.eleftheri.com/">Zum Freiheits‑Check</a>
+      <a class="btn btn-ghost" href="../">Zurück zur Startseite</a>
+    </div>
+
+    <p class="quote" style="margin-top:3rem">„Ich habe neu angefangen. Du kannst es auch.“<br /><span style="font-size:1rem; font-style:normal">— Tanja</span></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-pillars">ELEFTHERI — die Freie · Gesundheit · digitale Freiheit · Gemeinschaft</p>
+    <ul class="footer-links" style="margin-top:1rem">
+      <li><a href="../impressum/">Impressum</a></li>
+      <li><a href="../datenschutz/">Datenschutz</a></li>
+      <li><a class="cloak" data-u="mail" data-d="eleftheri.com" href="../impressum/">E‑Mail schreiben</a></li>
+    </ul>
+    <p class="footer-legal">© 2026 ELEFTHERI LLC · ELEFTHERI verspricht keine Heilung, kein Einkommen und keine Ergebnisse.</p>
+  </div>
+</footer>
+
+<script>
+/* Vorname und Einstufung kommen aus dem Browser-Zwischenspeicher der vorigen Seite —
+   nie über die Adresszeile, damit keine persönlichen Daten in der URL stehen. */
+(function () {
+  var name = "", grade = "";
+  try {
+    name = sessionStorage.getItem("eleftheri_vorname") || "";
+    grade = sessionStorage.getItem("eleftheri_einstufung") || "";
+    sessionStorage.removeItem("eleftheri_vorname");
+    sessionStorage.removeItem("eleftheri_einstufung");
+  } catch (e) {}
+  if (name) document.getElementById("dankeName").textContent = ", " + name;
+  if (grade === "C") {
+    document.getElementById("dankeAB").hidden = true;
+    document.getElementById("dankeC").hidden = false;
+  }
+})();
+</script>
+<script src="../script.js"></script>
+</body>
+</html>
