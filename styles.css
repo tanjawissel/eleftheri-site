@@ -327,7 +327,8 @@ html:not(.js) #quizBack, html:not(.js) #quizNext, html:not(.js) .progress { disp
 .portrait { margin: 0; }
 .portrait img { width: 100%; height: auto; border-radius: var(--radius); border-top: 4px solid var(--gold); }
 .portrait figcaption { margin-top: .8rem; font-size: .8rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.portrait img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
 @media (max-width: 860px) {
   .ehrlich-grid { grid-template-columns: 1fr; }
-  .portrait { max-width: 300px; }
+  .portrait { max-width: 230px; margin-inline: auto; text-align: center; }
 }
