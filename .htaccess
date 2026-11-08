@@ -1,0 +1,8 @@
+# Für das Hosting bei cyon (LiteSpeed). GitHub Pages ignoriert diese Datei.
+# Die Weiterleitung auf https ist bei cyon eine Einstellung der Website in my.cyon, nicht hier.
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+# www.eleftheri.com -> eleftheri.com
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
