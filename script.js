@@ -232,7 +232,16 @@
     }
     if (val("KONTAKTWEG") === "E-Mail") form.elements.TELEFON.value = "";
     var grade = einstufung();
-    document.getElementById("einstufung").value = grade;
+    /* Wohnort und Schlüsselmensch-Hinweis reisen im versteckten Einstufungsfeld mit,
+       damit Brevo kein neues Feld braucht. Die Auswahl selbst wird nicht gesendet. */
+    var ort = val("wohnort_ui");
+    var hinweis = grade;
+    if (ort) hinweis += " · " + ort;
+    if (ort === "München und Umgebung" && grade !== "C" && val("ZEIT") === "Mehr als 5 Stunden") {
+      hinweis += " · Schlüsselmensch-Kandidat";
+    }
+    document.getElementById("einstufung").value = hinweis;
+    form.querySelectorAll('input[name="wohnort_ui"]').forEach(function (r) { r.disabled = true; });
 
     /* Der Browser sendet jetzt an das versteckte Brevo-iframe. Vorname und Einstufung
        legen wir im Zwischenspeicher ab (nie in der Adresszeile) und wechseln dann auf

@@ -419,6 +419,14 @@
               <label class="choice"><input type="radio" name="KONTAKTWEG" value="WhatsApp" /> <span>WhatsApp</span></label>
               <label class="choice"><input type="radio" name="KONTAKTWEG" value="Telegram" /> <span>Telegram</span></label>
             </div>
+            <div class="field" role="radiogroup" aria-labelledby="ortLabel">
+              <span class="label" id="ortLabel">Wo lebst du? <span style="font-weight:400">(freiwillig)</span></span>
+              <label class="choice"><input type="radio" name="wohnort_ui" value="München und Umgebung" /> <span>München und Umgebung</span></label>
+              <label class="choice"><input type="radio" name="wohnort_ui" value="Anderswo in Bayern" /> <span>Anderswo in Bayern</span></label>
+              <label class="choice"><input type="radio" name="wohnort_ui" value="Anderswo in Deutschland" /> <span>Anderswo in Deutschland</span></label>
+              <label class="choice"><input type="radio" name="wohnort_ui" value="Österreich oder Schweiz" /> <span>Österreich oder Schweiz</span></label>
+              <label class="choice"><input type="radio" name="wohnort_ui" value="Woanders" /> <span>Woanders</span></label>
+            </div>
             <div class="field" id="telField" hidden>
               <label for="telefon">Telefonnummer <span style="font-weight:400">(mit Ländervorwahl, z. B. +49 …)</span></label>
               <input type="tel" id="telefon" name="TELEFON" autocomplete="tel" />
@@ -539,6 +547,6 @@
 
 <a class="btn btn-primary mobile-cta" href="#start" id="mobileCta">Deinen Weg wählen</a>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
